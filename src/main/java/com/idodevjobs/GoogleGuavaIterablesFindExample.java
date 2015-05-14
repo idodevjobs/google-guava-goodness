@@ -6,31 +6,31 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
-public class GoogleGuavaIterablesExample {
+public class GoogleGuavaIterablesFindExample {
 	private String input;
 
 	public static void main(String[] args) {
 
-		List<GoogleGuavaIterablesExample> testList = Lists.newArrayList(
-				new GoogleGuavaIterablesExample("input1"),
-				new GoogleGuavaIterablesExample("input2"));
+		List<GoogleGuavaIterablesFindExample> testList = Lists.newArrayList(
+				new GoogleGuavaIterablesFindExample("input1"),
+				new GoogleGuavaIterablesFindExample("input2"));
 		System.out.println(getInstanceFromList("input1", testList));
 
 	}
 
-	public static GoogleGuavaIterablesExample getInstanceFromList(
-			final String input, List<GoogleGuavaIterablesExample> testList) {
+	public static GoogleGuavaIterablesFindExample getInstanceFromList(
+			final String input, List<GoogleGuavaIterablesFindExample> testList) {
 		return Iterables.find(testList,
-				new Predicate<GoogleGuavaIterablesExample>() {
+				new Predicate<GoogleGuavaIterablesFindExample>() {
 					public boolean apply(
-							GoogleGuavaIterablesExample googleGuavaIterablesExample) {
-						return googleGuavaIterablesExample.getInput().equals(
+							GoogleGuavaIterablesFindExample googleGuavaIterablesFindExample) {
+						return googleGuavaIterablesFindExample.getInput().equals(
 								input);
 					}
 				});
 	}
 
-    public GoogleGuavaIterablesExample(String input) {
+    public GoogleGuavaIterablesFindExample(String input) {
         this.input = input;
     }
 
